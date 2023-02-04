@@ -88,3 +88,8 @@ streamlit.dataframe(my_data_row)
 
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Jackfruit')
 streamlit.write('thanks for adding ', fruit_choice)
+
+
+streamlit.text("Add data to snowflake by query:")
+my_cur.execute("insert into fruit_load_list (fruit_name) values ('from streamlit')")
+
