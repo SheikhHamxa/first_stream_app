@@ -84,3 +84,7 @@ streamlit.dataframe(my_data_row)
 my_data_row = my_cur.fetchall()
 streamlit.dataframe(my_data_row)
 
+
+
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Jackfruit')
+streamlit.write('thanks for adding ', fruit_choice)
