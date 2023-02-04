@@ -76,4 +76,4 @@ streamlit.text(my_data_row)
 
 
 ### lets check them in normalize way
-pandas.normalize(my_data_row)
+streamlit.dataframe(my_data_row)
