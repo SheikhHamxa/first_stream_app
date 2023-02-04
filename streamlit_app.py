@@ -77,3 +77,10 @@ streamlit.text(my_data_row)
 
 ### lets check them in normalize way
 streamlit.dataframe(my_data_row)
+
+
+##### lets fetch all records not single row
+
+my_data_row = my_cur.fetchall()
+streamlit.dataframe(my_data_row)
+
