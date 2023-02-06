@@ -5,7 +5,8 @@ import requests
 import urllib.request
 import urllib
 import snowflake.connector
-from urllib.error import URLERROR  # out of control uses
+##from urllib.error import URLERROR  # out of control uses
+##from urllib.error import URLError
 
 
 streamlit.title('My Parents New haelthy')
