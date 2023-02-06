@@ -42,6 +42,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 
+
 ###### We can pass input of name in variable lets see below
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
@@ -56,6 +57,19 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 
+
+#### lets introduce step of try except --- mean value already got enter wont go again
+try:
+fruit_choice = streamlit.text_input('What fruit would you like information about?')
+if not fruit_choice:
+  ("please select a valid fruit")
+else:
+  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
+  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+  streamlit.dataframe(fruityvice_normalized)
+
+
+  
 
 # requirements.txt
 ##snowflake-connector-python
